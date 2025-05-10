@@ -39,11 +39,12 @@ const HeroSection = () => {
                 variant="outline" 
                 size="lg"
                 className="bg-white/10 text-white hover:bg-white/20 border-white/20 rounded-full px-8"
-                as="a"
-                href="#services"
+                asChild
               >
-                See Our Services
-                <ArrowRight className="ml-2" size={18} />
+                <a href="#services">
+                  See Our Services
+                  <ArrowRight className="ml-2" size={18} />
+                </a>
               </Button>
             </div>
           </div>

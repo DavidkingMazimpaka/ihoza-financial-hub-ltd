@@ -36,9 +36,11 @@ const AboutSection = () => {
               </div>
             </div>
             
-            <Button as="a" href="#about" variant="outline" className="rounded-full">
-              Learn More About Us
-              <ArrowRight className="ml-2" size={16} />
+            <Button variant="outline" className="rounded-full" asChild>
+              <a href="#about">
+                Learn More About Us
+                <ArrowRight className="ml-2" size={16} />
+              </a>
             </Button>
           </div>
           

@@ -64,9 +64,11 @@ const PromotionsSection = () => {
         </div>
         
         <div className="text-center">
-          <Button as="a" href="#promotions" variant="outline" size="lg" className="rounded-full px-8">
-            View All Promotions
-            <ArrowRight className="ml-2" size={18} />
+          <Button variant="outline" size="lg" className="rounded-full px-8" asChild>
+            <a href="#promotions">
+              View All Promotions
+              <ArrowRight className="ml-2" size={18} />
+            </a>
           </Button>
         </div>
       </div>

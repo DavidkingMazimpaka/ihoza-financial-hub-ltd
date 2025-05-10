@@ -79,9 +79,11 @@ const ContactSection = () => {
         </div>
         
         <div className="mt-12 text-center">
-          <Button as="a" href="#contact" variant="outline" size="lg" className="rounded-full px-8">
-            View Full Contact Information
-            <ArrowRight className="ml-2" size={18} />
+          <Button variant="outline" size="lg" className="rounded-full px-8" asChild>
+            <a href="#contact">
+              View Full Contact Information
+              <ArrowRight className="ml-2" size={18} />
+            </a>
           </Button>
         </div>
       </div>

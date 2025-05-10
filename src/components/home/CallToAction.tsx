@@ -17,8 +17,8 @@ const CallToAction = () => {
           <div className="flex flex-wrap justify-center gap-4">
             <Button 
               size="lg" 
-              asChild
               className="bg-white text-primary hover:bg-white/90 rounded-full px-8"
+              asChild
             >
               <Link to="/contact">
                 Visit Our Location
@@ -29,8 +29,8 @@ const CallToAction = () => {
             <Button 
               variant="outline" 
               size="lg"
-              asChild
               className="border-white text-white hover:bg-white/10 rounded-full px-8"
+              asChild
             >
               <Link to="/services">
                 Explore Our Services
