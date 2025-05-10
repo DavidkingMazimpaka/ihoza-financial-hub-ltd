@@ -109,4 +109,28 @@
   .container-custom {
     @apply container mx-auto px-4 md:px-8;
   }
+  
+  .logo-grid {
+    @apply grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 items-center justify-items-center;
+  }
+  
+  .logo-item {
+    @apply flex items-center justify-center p-3 bg-white rounded-md shadow-sm hover:shadow-md transition-all duration-300;
+  }
+  
+  .service-banner {
+    @apply p-4 text-white font-bold text-xl md:text-2xl text-center rounded-t-lg uppercase;
+  }
+  
+  .banking-banner {
+    @apply bg-rwanda-darkRed;
+  }
+  
+  .transfer-banner {
+    @apply bg-blue-800;
+  }
+  
+  .mobile-banner {
+    @apply bg-yellow-400 text-black;
+  }
 }

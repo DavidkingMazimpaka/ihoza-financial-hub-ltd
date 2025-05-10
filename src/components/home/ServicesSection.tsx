@@ -5,22 +5,47 @@ import { ArrowRight, BellIcon, Image, Printer, Phone, Banknote } from 'lucide-re
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
+import bankingImage from '/lovable-uploads/624304b7-e8a6-4706-9ee2-f666dd8db1a6.png';
+import moneyTransferImage from '/lovable-uploads/342eb43b-64d4-4901-98a1-65054166a539.png';
+import mobileMoneyImage from '/lovable-uploads/60ecafe9-656a-433f-9de2-4120f7133b39.png';
+
 interface ServiceCardProps {
-  icon: React.ReactNode;
+  icon?: React.ReactNode;
+  imageUrl?: string;
   title: string;
   description: string;
   link: string;
+  variant?: 'icon' | 'image';
+  bannerClass?: string;
 }
 
-const ServiceCard = ({ icon, title, description, link }: ServiceCardProps) => {
+const ServiceCard = ({ icon, imageUrl, title, description, link, variant = 'icon', bannerClass }: ServiceCardProps) => {
   return (
-    <Link to={link}>
-      <Card className="service-card h-full">
-        <CardContent className="p-0 flex flex-col h-full">
-          <div className="mb-4 text-primary">
-            {icon}
+    <Link to={link} className="block h-full">
+      <Card className="service-card h-full overflow-hidden flex flex-col">
+        {bannerClass && (
+          <div className={`service-banner ${bannerClass}`}>
+            {title}
           </div>
-          <h3 className="text-lg font-semibold mb-2">{title}</h3>
+        )}
+        <CardContent className={`${bannerClass ? 'p-4' : 'p-6'} flex flex-col h-full`}>
+          {variant === 'icon' && icon && (
+            <div className="mb-4 text-primary">
+              {icon}
+            </div>
+          )}
+          
+          {variant === 'image' && imageUrl && (
+            <div className="mb-4 w-full">
+              <img 
+                src={imageUrl} 
+                alt={title} 
+                className="w-full h-auto object-cover rounded-md"
+              />
+            </div>
+          )}
+          
+          {!bannerClass && <h3 className="text-lg font-semibold mb-2">{title}</h3>}
           <p className="text-sm text-muted-foreground mb-4 flex-grow">{description}</p>
           <div className="flex items-center text-sm text-primary font-medium">
             <span>Learn more</span>
@@ -35,16 +60,28 @@ const ServiceCard = ({ icon, title, description, link }: ServiceCardProps) => {
 const ServicesSection = () => {
   const services = [
     {
-      icon: <Banknote size={36} />,
+      variant: 'image',
+      imageUrl: bankingImage,
       title: "Banking Agent",
       description: "Access banking services including deposits, withdrawals, and account opening for BK Yacu, BPR, Equity, and Ecobank.",
-      link: "/services#banking"
+      link: "/services#banking",
+      bannerClass: "banking-banner"
     },
     {
-      icon: <Banknote size={36} />,
+      variant: 'image',
+      imageUrl: moneyTransferImage,
       title: "Money Transfers",
       description: "Send and receive money through Western Union, MoneyGram, RIA, M-Pesa, Airtel Money, and more.",
-      link: "/services#transfers"
+      link: "/services#transfers",
+      bannerClass: "transfer-banner"
+    },
+    {
+      variant: 'image',
+      imageUrl: mobileMoneyImage,
+      title: "Mobile Money",
+      description: "Send and receive mobile money across Rwanda, Uganda, Kenya, Tanzania with MTN, Vodacom, Safaricom, and more.",
+      link: "/services#mobile-money",
+      bannerClass: "mobile-banner"
     },
     {
       icon: <BellIcon size={36} />,
@@ -63,12 +100,6 @@ const ServicesSection = () => {
       title: "Printing Services",
       description: "Get documents printed, scanned, and photocopied at affordable rates.",
       link: "/services#printing"
-    },
-    {
-      icon: <Image size={36} />,
-      title: "Passport Photos",
-      description: "Professional Dufotora passport photos that meet all official requirements.",
-      link: "/services#photos"
     }
   ];
 
@@ -87,9 +118,12 @@ const ServicesSection = () => {
             <ServiceCard
               key={index}
               icon={service.icon}
+              imageUrl={service.imageUrl}
               title={service.title}
               description={service.description}
               link={service.link}
+              variant={service.variant as 'icon' | 'image'}
+              bannerClass={service.bannerClass}
             />
           ))}
         </div>
