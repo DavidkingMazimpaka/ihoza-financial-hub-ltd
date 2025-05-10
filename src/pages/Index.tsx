@@ -13,13 +13,27 @@ import PartnersSection from '@/components/home/PartnersSection';
 const Index = () => {
   return (
     <Layout>
-      <HeroSection />
-      <ServicesSection />
-      <AboutSection />
-      <PartnersSection />
-      <HowWeWorkSection />
-      <PromotionsSection />
-      <ContactSection />
+      <div id="home">
+        <HeroSection />
+      </div>
+      <div id="services">
+        <ServicesSection />
+      </div>
+      <div id="about">
+        <AboutSection />
+      </div>
+      <div id="partners">
+        <PartnersSection />
+      </div>
+      <div id="how-we-work">
+        <HowWeWorkSection />
+      </div>
+      <div id="promotions">
+        <PromotionsSection />
+      </div>
+      <div id="contact">
+        <ContactSection />
+      </div>
       <CallToAction />
     </Layout>
   );

@@ -22,21 +22,27 @@ const Navbar = () => {
         
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-6">
-          <Link to="/" className="text-sm font-medium hover:text-primary transition-colors">
+          <a href="#home" className="text-sm font-medium hover:text-primary transition-colors">
             Home
-          </Link>
-          <Link to="/about" className="text-sm font-medium hover:text-primary transition-colors">
+          </a>
+          <a href="#about" className="text-sm font-medium hover:text-primary transition-colors">
             About Us
-          </Link>
-          <Link to="/services" className="text-sm font-medium hover:text-primary transition-colors">
+          </a>
+          <a href="#services" className="text-sm font-medium hover:text-primary transition-colors">
             Services
-          </Link>
-          <Link to="/promotions" className="text-sm font-medium hover:text-primary transition-colors">
+          </a>
+          <a href="#partners" className="text-sm font-medium hover:text-primary transition-colors">
+            Partners
+          </a>
+          <a href="#how-we-work" className="text-sm font-medium hover:text-primary transition-colors">
+            How We Work
+          </a>
+          <a href="#promotions" className="text-sm font-medium hover:text-primary transition-colors">
             Promotions
-          </Link>
-          <Link to="/contact" className="text-sm font-medium hover:text-primary transition-colors">
+          </a>
+          <a href="#contact" className="text-sm font-medium hover:text-primary transition-colors">
             Contact
-          </Link>
+          </a>
         </nav>
         
         {/* Call to Action Buttons */}
@@ -87,41 +93,55 @@ const Navbar = () => {
       {isMenuOpen && (
         <div className="md:hidden bg-background border-t">
           <div className="container-custom py-4 space-y-3">
-            <Link 
-              to="/" 
+            <a 
+              href="#home" 
               className="block py-2 hover:text-primary"
               onClick={() => setIsMenuOpen(false)}
             >
               Home
-            </Link>
-            <Link 
-              to="/about" 
+            </a>
+            <a 
+              href="#about" 
               className="block py-2 hover:text-primary"
               onClick={() => setIsMenuOpen(false)}
             >
               About Us
-            </Link>
-            <Link 
-              to="/services" 
+            </a>
+            <a 
+              href="#services" 
               className="block py-2 hover:text-primary"
               onClick={() => setIsMenuOpen(false)}
             >
               Services
-            </Link>
-            <Link 
-              to="/promotions" 
+            </a>
+            <a 
+              href="#partners" 
+              className="block py-2 hover:text-primary"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Partners
+            </a>
+            <a 
+              href="#how-we-work" 
+              className="block py-2 hover:text-primary"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              How We Work
+            </a>
+            <a 
+              href="#promotions" 
               className="block py-2 hover:text-primary"
               onClick={() => setIsMenuOpen(false)}
             >
               Promotions
-            </Link>
-            <Link 
-              to="/contact" 
+            </a>
+            <a 
+              href="#contact" 
               className="block py-2 hover:text-primary"
               onClick={() => setIsMenuOpen(false)}
             >
               Contact
-            </Link>
+            </a>
             <div className="flex items-center space-x-3 pt-3">
               <Button variant="outline" size="sm" className="flex items-center gap-2 text-xs">
                 <Phone size={14} />

@@ -1,6 +1,5 @@
 
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { Facebook, Instagram, MessageSquare } from 'lucide-react';
 
 const Footer = () => {
@@ -52,11 +51,13 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-bold mb-4">Quick Links</h3>
             <ul className="space-y-2">
-              <li><Link to="/" className="hover:underline">Home</Link></li>
-              <li><Link to="/about" className="hover:underline">About Us</Link></li>
-              <li><Link to="/services" className="hover:underline">Our Services</Link></li>
-              <li><Link to="/promotions" className="hover:underline">Promotions</Link></li>
-              <li><Link to="/contact" className="hover:underline">Contact Us</Link></li>
+              <li><a href="#home" className="hover:underline">Home</a></li>
+              <li><a href="#about" className="hover:underline">About Us</a></li>
+              <li><a href="#services" className="hover:underline">Our Services</a></li>
+              <li><a href="#partners" className="hover:underline">Partners</a></li>
+              <li><a href="#how-we-work" className="hover:underline">How We Work</a></li>
+              <li><a href="#promotions" className="hover:underline">Promotions</a></li>
+              <li><a href="#contact" className="hover:underline">Contact Us</a></li>
             </ul>
           </div>
           

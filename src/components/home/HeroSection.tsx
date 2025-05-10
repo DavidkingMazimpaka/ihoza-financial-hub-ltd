@@ -2,7 +2,6 @@
 import React from 'react';
 import { MessageSquare, ArrowRight } from 'lucide-react';
 import { Button } from "@/components/ui/button";
-import { Link } from 'react-router-dom';
 
 import overviewImage from '/lovable-uploads/9550159d-c43e-4226-a370-bd0f30373e62.png';
 
@@ -39,13 +38,12 @@ const HeroSection = () => {
               <Button 
                 variant="outline" 
                 size="lg"
-                asChild
                 className="bg-white/10 text-white hover:bg-white/20 border-white/20 rounded-full px-8"
+                as="a"
+                href="#services"
               >
-                <Link to="/services">
-                  See Our Services
-                  <ArrowRight className="ml-2" size={18} />
-                </Link>
+                See Our Services
+                <ArrowRight className="ml-2" size={18} />
               </Button>
             </div>
           </div>

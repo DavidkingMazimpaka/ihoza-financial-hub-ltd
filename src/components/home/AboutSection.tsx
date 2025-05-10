@@ -1,6 +1,5 @@
 
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from 'lucide-react';
 
@@ -37,11 +36,9 @@ const AboutSection = () => {
               </div>
             </div>
             
-            <Button asChild variant="outline" className="rounded-full">
-              <Link to="/about">
-                Learn More About Us
-                <ArrowRight className="ml-2" size={16} />
-              </Link>
+            <Button as="a" href="#about" variant="outline" className="rounded-full">
+              Learn More About Us
+              <ArrowRight className="ml-2" size={16} />
             </Button>
           </div>
           

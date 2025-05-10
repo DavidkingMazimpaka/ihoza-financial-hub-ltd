@@ -1,6 +1,5 @@
 
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { ArrowRight, Clock, Gift } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 
@@ -55,21 +54,19 @@ const PromotionsSection = () => {
                 <h3 className="text-xl font-bold mb-3">{promo.title}</h3>
                 <p className="text-muted-foreground mb-6 flex-grow">{promo.description}</p>
                 
-                <Link to="/promotions" className="inline-flex items-center text-primary font-medium text-sm hover:underline">
+                <a href="#promotions" className="inline-flex items-center text-primary font-medium text-sm hover:underline">
                   Learn more about this offer
                   <ArrowRight size={16} className="ml-1" />
-                </Link>
+                </a>
               </div>
             </div>
           ))}
         </div>
         
         <div className="text-center">
-          <Button asChild variant="outline" size="lg" className="rounded-full px-8">
-            <Link to="/promotions">
-              View All Promotions
-              <ArrowRight className="ml-2" size={18} />
-            </Link>
+          <Button as="a" href="#promotions" variant="outline" size="lg" className="rounded-full px-8">
+            View All Promotions
+            <ArrowRight className="ml-2" size={18} />
           </Button>
         </div>
       </div>
