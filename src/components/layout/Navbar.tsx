@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
-import { Phone, WhatsApp } from 'lucide-react';
+import { Phone, MessageSquare } from 'lucide-react';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -46,7 +46,7 @@ const Navbar = () => {
             <span className="hidden md:inline">Call Us</span>
           </Button>
           <Button size="sm" className="flex items-center gap-2 bg-[#25D366] hover:bg-[#128C7E] text-white">
-            <WhatsApp size={16} />
+            <MessageSquare size={16} />
             <span>WhatsApp</span>
           </Button>
         </div>
@@ -128,7 +128,7 @@ const Navbar = () => {
                 Call Us
               </Button>
               <Button size="sm" className="flex items-center gap-2 bg-[#25D366] hover:bg-[#128C7E] text-white text-xs">
-                <WhatsApp size={14} />
+                <MessageSquare size={14} />
                 WhatsApp
               </Button>
             </div>

@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { WhatsApp, ArrowRight } from 'lucide-react';
+import { MessageSquare, ArrowRight } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Link } from 'react-router-dom';
 
@@ -30,7 +30,7 @@ const HeroSection = () => {
                 size="lg" 
                 className="bg-[#25D366] hover:bg-[#128C7E] text-white rounded-full px-8"
               >
-                <WhatsApp className="mr-2" size={20} />
+                <MessageSquare className="mr-2" size={20} />
                 Contact Us on WhatsApp
               </Button>
               

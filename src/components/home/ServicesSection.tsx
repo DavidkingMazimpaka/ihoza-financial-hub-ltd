@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, BillIcon, Image, Printer, Phone, Money, BanknoteIcon } from 'lucide-react';
+import { ArrowRight, BellIcon, Image, Printer, Phone, Banknote } from 'lucide-react';
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
@@ -35,19 +35,19 @@ const ServiceCard = ({ icon, title, description, link }: ServiceCardProps) => {
 const ServicesSection = () => {
   const services = [
     {
-      icon: <BanknoteIcon size={36} />,
+      icon: <Banknote size={36} />,
       title: "Banking Agent",
       description: "Access banking services including deposits, withdrawals, and account opening for BK Yacu, BPR, Equity, and Ecobank.",
       link: "/services#banking"
     },
     {
-      icon: <Money size={36} />,
+      icon: <Banknote size={36} />,
       title: "Money Transfers",
       description: "Send and receive money through Western Union, MoneyGram, RIA, M-Pesa, Airtel Money, and more.",
       link: "/services#transfers"
     },
     {
-      icon: <BillIcon size={36} />,
+      icon: <BellIcon size={36} />,
       title: "Bill Payments",
       description: "Pay your REG, WASAC, RRA, and eFASHE bills quickly and efficiently without long queues.",
       link: "/services#bills"

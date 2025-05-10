@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Phone, Mail, MapPin, ArrowRight, WhatsApp } from 'lucide-react';
+import { Phone, Mail, MapPin, ArrowRight, MessageSquare } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 
 const ContactSection = () => {
@@ -55,7 +55,7 @@ const ContactSection = () => {
             
             <div className="mt-8">
               <Button className="w-full bg-[#25D366] hover:bg-[#128C7E] text-white">
-                <WhatsApp className="mr-2" size={18} />
+                <MessageSquare className="mr-2" size={18} />
                 Chat with Us on WhatsApp
               </Button>
             </div>
