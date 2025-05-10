@@ -68,6 +68,7 @@ export default {
 					blue: '#1A78E2',
 					yellow: '#FFCE00',
 					green: '#1EB53A',
+					darkRed: '#8B0000' // Adding dark red color
 				}
 			},
 			borderRadius: {
