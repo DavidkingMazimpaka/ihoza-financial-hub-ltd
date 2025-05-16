@@ -33,7 +33,9 @@ const HeroSection = () => {
               >
                 <span className="flex items-center justify-center">
                   <MessageSquare className="mr-2" size={20} />
-                  Contact Us on WhatsApp
+                  <a href="https://wa.me/+250781499937" target="_blank" rel="noopener noreferrer">
+                  Chat with Us on WhatsApp
+                  </a>
                 </span>
               </Button>
               

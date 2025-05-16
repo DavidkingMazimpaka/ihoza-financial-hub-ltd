@@ -56,7 +56,9 @@ const ContactSection = () => {
             <div className="mt-8">
               <Button className="w-full bg-[#25D366] hover:bg-[#128C7E] text-white">
                 <MessageSquare className="mr-2" size={18} />
+                <a href="https://wa.me/+250781499937" target="_blank" rel="noopener noreferrer">
                 Chat with Us on WhatsApp
+                </a>
               </Button>
             </div>
           </div>
@@ -67,7 +69,7 @@ const ContactSection = () => {
               <div className="relative overflow-hidden rounded-lg h-full min-h-[300px]">
                 {/* This is a placeholder for the Google Map embed */}
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63799.41051872461!2d30.03390269449372!3d-1.9441077483539164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19dca4258ed8e797%3A0xf32b36a5411c0117!2sKigali%2C%20Rwanda!5e0!3m2!1sen!2sus!4v1714888409400!5m2!1sen!2sus"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4029.0539011134642!2d30.058396875014644!3d-1.9460126980363488!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19dca426aacbc701%3A0xcb963db68a4ac89b!2sLa%20Bonne%20Adresse%2C%20KN%202%20Roundabout%2C%20Kigali!5e1!3m2!1sen!2srw!4v1747399117122!5m2!1sen!2srw"
                   className="w-full h-full absolute inset-0 border-0"
                   allowFullScreen
                   loading="lazy"

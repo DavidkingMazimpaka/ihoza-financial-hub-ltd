@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from 'lucide-react';
@@ -62,7 +61,7 @@ const AboutSection = () => {
               
               {/* Stats Card */}
               <div className="absolute -bottom-10 right-10 bg-white rounded-lg p-4 shadow-xl border border-muted w-48">
-                <div className="font-bold text-lg mb-1">RWF 10M+</div>
+                <div className="font-bold text-lg mb-1">RWF 5M+</div>
                 <div className="text-sm text-muted-foreground">Daily Transaction Volume</div>
               </div>
             </div>

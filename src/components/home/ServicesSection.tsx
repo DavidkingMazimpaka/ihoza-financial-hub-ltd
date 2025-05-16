@@ -19,15 +19,11 @@ interface ServiceCardProps {
   bannerClass?: string;
 }
 
-const ServiceCard = ({ icon, imageUrl, title, description, link, variant = 'icon', bannerClass }: ServiceCardProps) => {
+const ServiceCard = ({ icon, imageUrl,description, link, variant = 'icon', bannerClass }: ServiceCardProps) => {
   return (
     <Link to={link} className="block h-full">
       <Card className="service-card h-full overflow-hidden flex flex-col">
-        {bannerClass && (
-          <div className={`service-banner ${bannerClass}`}>
-            {title}
-          </div>
-        )}
+        
         <CardContent className={`${bannerClass ? 'p-4' : 'p-6'} flex flex-col h-full`}>
           {variant === 'icon' && icon && (
             <div className="mb-4 text-primary">
@@ -39,13 +35,10 @@ const ServiceCard = ({ icon, imageUrl, title, description, link, variant = 'icon
             <div className="mb-4 w-full">
               <img 
                 src={imageUrl} 
-                alt={title} 
                 className="w-full h-auto object-cover rounded-md"
               />
             </div>
           )}
-          
-          {!bannerClass && <h3 className="text-lg font-semibold mb-2">{title}</h3>}
           <p className="text-sm text-muted-foreground mb-4 flex-grow">{description}</p>
           <div className="flex items-center text-sm text-primary font-medium">
             <span>Learn more</span>
@@ -62,9 +55,8 @@ const ServicesSection = () => {
     {
       variant: 'image',
       imageUrl: bankingImage,
-      title: "Banking Agent",
       description: "Access banking services including deposits, withdrawals, and account opening for BK Yacu, BPR, Equity, and Ecobank.",
-      link: "/services#banking",
+      link: "/services#",
       bannerClass: "banking-banner"
     },
     {
